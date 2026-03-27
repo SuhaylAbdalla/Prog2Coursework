@@ -15,8 +15,9 @@ public class startScreenController {
     @FXML
     //login button gets pressed - opens main menu window
     private void loginPressed(ActionEvent event) throws IOException {
+
         /*
-        TO ADD: proper login system that checks username and password
+        TODO proper login system that checks username and password
          */
 
         //getting new file

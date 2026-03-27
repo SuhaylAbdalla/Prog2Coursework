@@ -47,7 +47,7 @@ public class mainMenuController {
     }
 
     @FXML
-    //user wants to see health data - opens health window
+    //user wants to see health data - opens trends window
     private void trendsPressed(ActionEvent event) throws IOException {
 
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("trendsWindow.fxml"));
@@ -63,7 +63,7 @@ public class mainMenuController {
     }
 
     @FXML
-    //user wants to see health data - opens health window
+    //user wants to see health data - opens profile window
     private void academicProfilePressed(ActionEvent event) throws IOException {
 
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("academicProfile.fxml"));
