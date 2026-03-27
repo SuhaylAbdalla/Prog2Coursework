@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="150.0" layoutY="150.0" mnemonicParsing="false" prefHeight="180.0" prefWidth="250.0" style="-fx-background-color: #121640;" text="Start a Study Session" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Button layoutX="500.0" layoutY="150.0" mnemonicParsing="false" prefHeight="180.0" prefWidth="250.0" style="-fx-background-color: #121640;" text="Health" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Button layoutX="150.0" layoutY="370.0" mnemonicParsing="false" prefHeight="180.0" prefWidth="250.0" style="-fx-background-color: #121640;" text="Trends" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Button layoutX="500.0" layoutY="370.0" mnemonicParsing="false" prefHeight="180.0" prefWidth="250.0" style="-fx-background-color: #121640;" text="Academic Profile" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="70.0" prefWidth="300.0" text="Main Menu" textFill="#121640">
+         <font>
+            <Font name="Book Antiqua" size="36.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="300.0" layoutY="27.0" prefWidth="300.0" text="study tracker" textFill="#121640">
+         <font>
+            <Font name="Cooper Black" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

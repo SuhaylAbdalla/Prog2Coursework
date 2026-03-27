@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studytracker.startScreenController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="450.0" spacing="30.0" style="-fx-background-color: lighgrey;">
+         <children>
+            <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" promptText="Enter Username" />
+            <PasswordField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" promptText="Enter Password" />
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#loginPressed" prefHeight="49.0" prefWidth="163.0" text="Log In" />
+         </children></VBox>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="450.0" style="-fx-background-color: #121640;">
+         <children>
+            <Button mnemonicParsing="false" text="Create Account" />
+         </children></VBox>
+   </children>
+</HBox>
