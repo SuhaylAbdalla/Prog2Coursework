@@ -4,9 +4,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studytracker.mainMenuController">
    <children>
-      <Button layoutX="150.0" layoutY="150.0" mnemonicParsing="false" prefHeight="180.0" prefWidth="250.0" style="-fx-background-color: #121640;" text="Start a Study Session" textFill="WHITE">
+      <Button layoutX="150.0" layoutY="150.0" mnemonicParsing="false" onAction="#studySessionPressed" prefHeight="180.0" prefWidth="250.0" style="-fx-background-color: #121640;" text="Start a Study Session" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font></Button>
@@ -22,14 +22,14 @@
          <font>
             <Font size="20.0" />
          </font></Button>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="70.0" prefWidth="300.0" text="Main Menu" textFill="#121640">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="70.0" prefWidth="300.0" text="MAIN MENU" textFill="#121640">
          <font>
-            <Font name="Book Antiqua" size="36.0" />
+            <Font name="Cooper Black" size="32.0" />
          </font>
       </Label>
       <Label alignment="CENTER" layoutX="300.0" layoutY="27.0" prefWidth="300.0" text="study tracker" textFill="#121640">
          <font>
-            <Font name="Cooper Black" size="36.0" />
+            <Font name="Cooper Black" size="40.0" />
          </font>
       </Label>
    </children>

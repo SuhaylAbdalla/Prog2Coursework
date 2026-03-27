@@ -10,17 +10,14 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class startScreenController {
+public class mainMenuController {
+
 
     @FXML
-    //login button gets pressed - opens main menu window
-    private void loginPressed(ActionEvent event) throws IOException {
-        /*
-        TO ADD: proper login system that checks username and password
-         */
+    //user wants to start a study session - opens study session window
+    private void studySessionPressed(ActionEvent event) throws IOException {
 
-        //getting new file
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("mainMenu.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("studySession.fxml"));
         Parent root = fxmlLoader.load();
 
         //getting current stage
