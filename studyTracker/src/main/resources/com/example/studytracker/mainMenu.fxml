@@ -10,15 +10,15 @@
          <font>
             <Font size="20.0" />
          </font></Button>
-      <Button layoutX="500.0" layoutY="150.0" mnemonicParsing="false" prefHeight="180.0" prefWidth="250.0" style="-fx-background-color: #121640;" text="Health" textFill="WHITE">
+      <Button layoutX="500.0" layoutY="150.0" mnemonicParsing="false" onAction="#healthPressed" prefHeight="180.0" prefWidth="250.0" style="-fx-background-color: #121640;" text="Health" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font></Button>
-      <Button layoutX="150.0" layoutY="370.0" mnemonicParsing="false" prefHeight="180.0" prefWidth="250.0" style="-fx-background-color: #121640;" text="Trends" textFill="WHITE">
+      <Button layoutX="150.0" layoutY="370.0" mnemonicParsing="false" onAction="#trendsPressed" prefHeight="180.0" prefWidth="250.0" style="-fx-background-color: #121640;" text="Trends" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font></Button>
-      <Button layoutX="500.0" layoutY="370.0" mnemonicParsing="false" prefHeight="180.0" prefWidth="250.0" style="-fx-background-color: #121640;" text="Academic Profile" textFill="WHITE">
+      <Button layoutX="500.0" layoutY="370.0" mnemonicParsing="false" onAction="#academicProfilePressed" prefHeight="180.0" prefWidth="250.0" style="-fx-background-color: #121640;" text="Academic Profile" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font></Button>
@@ -32,5 +32,6 @@
             <Font name="Cooper Black" size="40.0" />
          </font>
       </Label>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#logOutPressed" text="Log Out" />
    </children>
 </Pane>

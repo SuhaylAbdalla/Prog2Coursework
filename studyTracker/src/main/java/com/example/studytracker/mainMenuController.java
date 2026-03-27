@@ -28,4 +28,68 @@ public class mainMenuController {
         stage.setScene(scene);
         stage.show();
     }
+
+
+    @FXML
+    //user wants to see health data - opens health window
+    private void healthPressed(ActionEvent event) throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("healthWindow.fxml"));
+        Parent root = fxmlLoader.load();
+
+        //getting current stage
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        //displaying new scene
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    //user wants to see health data - opens health window
+    private void trendsPressed(ActionEvent event) throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("trendsWindow.fxml"));
+        Parent root = fxmlLoader.load();
+
+        //getting current stage
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        //displaying new scene
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    //user wants to see health data - opens health window
+    private void academicProfilePressed(ActionEvent event) throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("academicProfile.fxml"));
+        Parent root = fxmlLoader.load();
+
+        //getting current stage
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        //displaying new scene
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void logOutPressed(ActionEvent event) throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("startScreen.fxml"));
+        Parent root = fxmlLoader.load();
+
+        //getting current stage
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        //displaying new scene
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }
