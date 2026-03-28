@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studytracker.studySessionReviewController">
+   <children>
+      <Label layoutX="35.0" layoutY="29.0" text="study tracker" textFill="#121640">
+         <font>
+            <Font name="Cooper Black" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="80.0" text="SESSION REVIEW" textFill="#121640">
+         <font>
+            <Font name="Cooper Black" size="32.0" />
+         </font>
+      </Label>
+      <Slider fx:id="productivitySlider" blockIncrement="1.0" layoutX="149.0" layoutY="288.0" majorTickUnit="9.0" max="10.0" min="1.0" minorTickCount="8" prefHeight="41.0" prefWidth="632.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+      <Button layoutX="52.0" layoutY="488.0" mnemonicParsing="false" onAction="#savePressed" prefHeight="45.0" prefWidth="148.0" style="-fx-background-color: #121640;" text="Save &amp; See Insights" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="sessionInfoLabel" layoutX="38.0" layoutY="121.0" prefHeight="17.0" prefWidth="142.0" text="Label" textFill="#121640">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="38.0" layoutY="242.0" text="Rate how productive you felt this session was" textFill="#121640">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
