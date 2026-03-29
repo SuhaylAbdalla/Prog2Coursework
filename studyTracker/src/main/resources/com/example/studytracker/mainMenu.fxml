@@ -32,6 +32,9 @@
             <Font name="Cooper Black" size="40.0" />
          </font>
       </Label>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#logOutPressed" text="Log Out" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#logOutPressed" style="-fx-background-color: #121640;" text="LOG OUT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
    </children>
 </Pane>
