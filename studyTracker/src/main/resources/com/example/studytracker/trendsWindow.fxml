@@ -12,17 +12,27 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #FFFFFF;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studytracker.trendsWindowController">
    <children>
+       <Label alignment="CENTER" layoutX="300.0" layoutY="27.0" prefWidth="300.0" text="study tracker" textFill="#121640">
+           <font>
+               <Font name="Cooper Black" size="40.0" />
+           </font>
+       </Label>
+       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="70.0" prefWidth="300.0" text="TRENDS REVIEW" textFill="#121640">
+           <font>
+               <Font name="Cooper Black" size="32.0" />
+           </font>
+       </Label>
        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnToMenu" style="-fx-background-color: #121640;" text="RETURN" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
-      <PieChart fx:id="studyPie" layoutX="53.0" layoutY="239.0" prefHeight="275.0" prefWidth="275.0" />
-      <Label fx:id="pieLabel" layoutX="53.0" layoutY="222.0" text="STUDY PER LOCATION" textFill="#121640">
+      <PieChart fx:id="studyPie" layoutX="53.0" layoutY="208.0" prefHeight="275.0" prefWidth="275.0" />
+      <Label fx:id="pieLabel" layoutX="53.0" layoutY="191.0" text="STUDY PER LOCATION" textFill="#121640">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <BarChart fx:id="productivityChart" layoutX="369.0" layoutY="239.0" prefHeight="275.0" prefWidth="450.0">
+      <BarChart fx:id="productivityChart" layoutX="369.0" layoutY="208.0" prefHeight="275.0" prefWidth="450.0">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>
@@ -30,23 +40,29 @@
           <NumberAxis side="LEFT" />
         </yAxis>
       </BarChart>
-      <Label fx:id="barLabel" layoutX="369.0" layoutY="222.0" text="PRODUCTIVITY BY LOCATION" textFill="#121640">
+      <Label fx:id="barLabel" layoutX="369.0" layoutY="191.0" text="PRODUCTIVITY BY LOCATION" textFill="#121640">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <ToggleButton fx:id="locationToggle" layoutX="80.0" layoutY="81.0" mnemonicParsing="false" onAction="#locationTogglePressed" style="-fx-background-color: #2E315E;" text="LOCATION DATA" textFill="WHITE">
+      <ToggleButton fx:id="locationToggle" layoutX="53.0" layoutY="152.0" mnemonicParsing="false" onAction="#locationTogglePressed" style="-fx-background-color: #2E315E;" text="LOCATION DATA" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></ToggleButton>
-      <ToggleButton fx:id="dayToggle" layoutX="202.0" layoutY="81.0" mnemonicParsing="false" onAction="#dayTogglePressed" style="-fx-background-color: #121640;" text="DAY DATA" textFill="WHITE">
+      <ToggleButton fx:id="dayToggle" layoutX="175.0" layoutY="152.0" mnemonicParsing="false" onAction="#dayTogglePressed" style="-fx-background-color: #121640;" text="DAY DATA" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></ToggleButton>
-      <ToggleButton layoutX="288.0" layoutY="81.0" mnemonicParsing="false" style="-fx-background-color: #121640;" text="TIME DATA" textFill="WHITE">
+      <ToggleButton layoutX="261.0" layoutY="152.0" mnemonicParsing="false" style="-fx-background-color: #121640;" text="TIME DATA" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </ToggleButton>
+      <Label layoutX="53.0" layoutY="494.0" text="INSIGHTS" textFill="#121640">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="insightsLabel" layoutX="53.0" layoutY="512.0" prefHeight="73.0" prefWidth="753.0" style="-fx-background-color: #2E315E;" textFill="WHITE" />
    </children>
 </AnchorPane>

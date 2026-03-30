@@ -34,6 +34,8 @@ public class trendsWindowController {
     private Label pieLabel;
     @FXML
     private Label barLabel;
+    @FXML
+    private Label insightsLabel;
 
 
     //TODO: get data from databases to populate the charts - current stuff is just placeholding
@@ -88,6 +90,9 @@ public class trendsWindowController {
         productivityChart.setAnimated(false);
         studyPie.setAnimated(false);
 
+        //TODO: make actual insights based on the user data
+        insightsLabel.setText("You study best at X, you should try to avoid studying at Y ....");
+
     }
 
     //user wants to return to the menu from the trends page
@@ -121,6 +126,9 @@ public class trendsWindowController {
         studyPie.setData(locationPieData);
         productivityChart.setData(FXCollections.observableArrayList(locationProdCharSeries));
 
+        //updating insight label
+        insightsLabel.setText("You study best at X, you should try to avoid studying at Y ....");
+
 
     }
 
@@ -138,6 +146,9 @@ public class trendsWindowController {
         //updating charts
         studyPie.setData(dayPieData);
         productivityChart.setData(FXCollections.observableArrayList(dailyProdChartSeries));
+
+        //updating insight label
+        insightsLabel.setText("You study best on X, you should try to avoid studying on Y ....");
 
     }
 
