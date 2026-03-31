@@ -4,13 +4,17 @@ import java.sql.Statement;
 
 public class database_init {
     public static void main(String[] args) {
-        Connection conn = DriverManager.getConnection(
-            "jdbc:mysql://localhost:3306/",
-            "username",
-            "password"
-        );
+        try {
+            Connection conn = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/", // find the driver
+                "username",
+                "password"
+            );
 
-        Statement stmt = conn.createStatement();
-        stmt.executeUpdate("CREATE DATABASE user");
+            Statement stmt = conn.createStatement();
+            stmt.executeUpdate("CREATE DATABASE user");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
