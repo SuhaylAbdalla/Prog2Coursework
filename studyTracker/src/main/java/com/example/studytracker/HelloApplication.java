@@ -8,9 +8,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+
+    //creates new scene and displays the login screen
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("startScreen.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Study Tracker");
         stage.setScene(scene);

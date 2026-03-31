@@ -1,0 +1,8 @@
+/* giving bar chart the correct default colour */
+.default-color0.chart-bar {
+    -fx-bar-fill: #121640;
+    -fx-background-radius: 5 5 0 0;
+}
+.default-color0.chart-legend-item-symbol {
+    -fx-background-color: #121640;
+}
