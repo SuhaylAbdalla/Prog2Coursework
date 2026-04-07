@@ -22,3 +22,13 @@ CREATE TABLE assignments (
     assignment_module_id INTEGER NOT NULL,
     FOREIGN KEY (assignment_module_id) REFERENCES modules (id_module)
 );
+
+# For now, you cannot have multiple assignment per study session 
+CREATE TABLE study_sessions (
+    id_session INTEGER NOT NULL PRIMARY KEY,
+    start DATETIME NOT NULL,
+    end DATETIME,
+    duration DATETIME,
+    session_assignment_id INTEGER NOT NULL,
+    FOREIGN KEY (session_assignment_id) REFERENCES assignments (id_assignment)
+);
