@@ -12,7 +12,11 @@ public class database_init {
             );
 
             Statement stmt = conn.createStatement();
-            stmt.executeUpdate("CREATE DATABASE user");
+            stmt.executeUpdate("CREATE DATABASE user;");
+            stmt.executeUpdate("CREATE TABLE courses (
+                                    id_course INTEGER NOT NULL PRIMARY KEY,
+                                    course_name TEXT NOT NULL,
+                                    course_code TEXT NOT NULL);");
         } catch (Exception e) {
             e.printStackTrace();
         }
