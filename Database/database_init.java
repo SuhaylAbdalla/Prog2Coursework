@@ -2,6 +2,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 
+//Doesn't work like I want it to, using python for now
 public class database_init {
     public static void main(String[] args) {
         try {
