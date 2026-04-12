@@ -28,7 +28,8 @@ CREATE TABLE study_sessions (
     id_session INTEGER NOT NULL PRIMARY KEY,
     start DATETIME NOT NULL,
     end DATETIME,
-    duration DATETIME,
+    duration TIME,
+    location TEXT
     session_assignment_id INTEGER NOT NULL,
     FOREIGN KEY (session_assignment_id) REFERENCES assignments (id_assignment)
 );
