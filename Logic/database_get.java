@@ -17,5 +17,5 @@ public class database_get {
 
     public double getStudyHours(String timeframe) { // gets the number of hours studied in a given timeframe
         return 0.0;
-    } // SELECT duration FROM study_sessions WHERE start > beginning_timeframe AND end < end_timeframe; use AVG
+    } // SELECT AVG (duration) FROM study_sessions WHERE start > beginning_timeframe AND end < end_timeframe;
 }
