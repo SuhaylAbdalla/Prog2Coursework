@@ -12,7 +12,7 @@ public class database_get {
                 "password"
             );
             Statement statement = conn.createStatement();
-            ResultSet result = statement.executeQuery("select location from study_sessions;");
+            ResultSet result = statement.executeQuery("SELECT location FROM study_sessions;");
             return result.getString(1);
         }
         catch (Exception e) {
