@@ -1,16 +1,16 @@
 import sqlite3
 
-# Connexion à la base de données SQLite (ou création si elle n'existe pas)
+# Connexion to the DB (or creation if it doesn't exist)
 conn = sqlite3.connect('database.db')
 cursor = conn.cursor()
 
-# Création de la table
-
+# Create the different tables of the database
+# Is there a course code for computer science, I can't find one
 cursor.execute('''
 CREATE TABLE courses (
     id_course INTEGER NOT NULL PRIMARY KEY,
     course_name TEXT NOT NULL,
-    course_code TEXT NOT NULL
+    course_code TEXT NOT NULL 
 );
 ''')
 
@@ -24,8 +24,8 @@ CREATE TABLE modules (
 );
 ''')
 
-cursor.execute('''
 # exams count as assignment, at least in the back end
+cursor.execute('''
 CREATE TABLE assignments (
     id_assignment INTEGER NOT NULL PRIMARY KEY,
     assignment_title TEXT NOT NULL,
@@ -37,8 +37,8 @@ CREATE TABLE assignments (
 );
 ''')
 
+# For now, you cannot have multiple assignment per study session
 cursor.execute('''
-# For now, you cannot have multiple assignment per study session 
 CREATE TABLE study_sessions (
     id_session INTEGER NOT NULL PRIMARY KEY,
     start DATETIME NOT NULL,
@@ -52,6 +52,6 @@ CREATE TABLE study_sessions (
 ''')
 
 
-# Sauvegarder les changements et fermer la connexion
+# Saves the changes and closes the connection
 conn.commit()
 conn.close()
