@@ -1,5 +1,21 @@
-
+import java.sql.*;
 public class database_get {
+
+    public String getAllLocations() { // gets all locations that have been studied at
+        try {
+            Connection conn = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/", // find the driver
+                "username",
+                "password"
+            );
+            Statement statement = conn.createStatement();
+            ResultSet result = statement.executeQuery("select location from study_sessions;");
+            return result.getString(1);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     
     public String[] getTopLocations() { // gets the locations most frequently studied at
         String[] topLocations = {};
