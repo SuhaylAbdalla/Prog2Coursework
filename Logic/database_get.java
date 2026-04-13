@@ -1,4 +1,7 @@
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 public class database_get {
 
     public String getAllLocations() { // gets all locations that have been studied at
@@ -9,11 +12,11 @@ public class database_get {
                 "password"
             );
             Statement statement = conn.createStatement();
-            ResultSet result = statement.executeQuery("SELECT location FROM study_sessions;");
+            ResultSet result = statement.executeQuery("select location from study_sessions;");
             return result.getString(1);
         }
         catch (Exception e) {
-            e.printStackTrace();
+            return e.toString();
         }
     }
     
