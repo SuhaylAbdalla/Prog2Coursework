@@ -5,7 +5,8 @@ conn = sqlite3.connect('database.db')
 cursor = conn.cursor()
 
 # Create the different tables of the database
-# Is there a course code for computer science, I can't find one
+
+# Is there a course code for computer science, I can't find one ?
 cursor.execute('''
 CREATE TABLE courses (
     id_course INTEGER NOT NULL PRIMARY KEY,
