@@ -29,7 +29,8 @@ CREATE TABLE study_sessions (
     start DATETIME NOT NULL,
     end DATETIME,
     duration TIME,
-    location TEXT
+    location TEXT,
+    productivity INTEGER NOT NULL CHECK (productivity > 0 AND productivity < 11),
     session_assignment_id INTEGER NOT NULL,
     FOREIGN KEY (session_assignment_id) REFERENCES assignments (id_assignment)
 );
