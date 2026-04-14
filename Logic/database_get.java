@@ -20,10 +20,21 @@ public class database_get {
         }
     }
     
-    public String[] getTopLocations() { // gets the locations most frequently studied at
-        String[] topLocations = {};
-        return topLocations;
-    } // SELECT location FROM study_sessions;
+    public String getTopLocations() { // gets the locations most frequently studied at
+        try {
+            Connection conn = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/", // find the driver
+                "username",
+                "password"
+            );
+            Statement statement = conn.createStatement();
+            ResultSet result = statement.executeQuery("SELECT location, COUNT(id_session) AS [TimesStudiedAt] FROM study_sessions GROUP BY location;");
+            return result.getString(1); // temporary; currently only returns the locations
+        }
+        catch (Exception e) {
+            return e.toString();
+        }
+    }
 
     public String[] getProductiveTimes() { // gets the times most frequently studied at 
         String[] productiveTimes = {};
