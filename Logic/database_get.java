@@ -36,9 +36,20 @@ public class database_get {
         }
     }
 
-    public String[] getProductiveTimes() { // gets the times most frequently studied at 
-        String[] productiveTimes = {};
-        return productiveTimes;
+    public String getProductiveTimes() { // gets the times most frequently studied at - needs date attribute in the study_sessions table to work effectively
+         try {
+            Connection conn = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/", // find the driver
+                "username",
+                "password"
+            );
+            Statement statement = conn.createStatement();
+            ResultSet result = statement.executeQuery("SELECT start, COUNT(id_session) AS [TimesStudiedAt] FROM study_sessions GROUP BY start;");
+            return result.getString(1); // temporary; currently only returns the start times
+        }
+        catch (Exception e) {
+            return e.toString();
+        }
     } // SELECT start, end, duration FROM study_sessions; use aggregations
 
     public double getAverageFocusTime(String timeframe) { // gets the average focus time of study sessions in a given timeframe
