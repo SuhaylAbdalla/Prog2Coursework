@@ -10,15 +10,13 @@ import java.sql.*;
 public class DatabaseConnection {
     
     private static final String DB_URL = "jdbc:sqlite:database.db";
-    private static String user = "user";
-    private static String password = "password";
     private static Connection conn = null;
     
     public static Connection getConnection() throws SQLException{
         
         //check if the database doesn't exist yet
         if(conn == null || conn.isClosed()){
-            conn = DriverManager.getConnection(DB_URL, user, password);
+            conn = DriverManager.getConnection(DB_URL);
             System.out.println("Database connection established");  
         }
         return conn;
@@ -77,5 +75,6 @@ public class DatabaseConnection {
         } catch(SQLException e){
             System.err.println("Error when initialising the database : " + e.getMessage());
         }
+        closeDatabaseConnection();
     } 
 }
