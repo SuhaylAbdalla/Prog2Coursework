@@ -2,6 +2,7 @@ import java.sql.*;
 /**
  *
  * @author oluwabukunmi
+ * @author lulo166
  */
 
 // HAS NOT BEEN TESTED STILL A WORK IN PROGRESS :P
@@ -34,7 +35,7 @@ public class DatabaseConnection {
     
     //create all the tables within the database + test
     
-    public static void initialiseDatabse(){
+    public static void main(String[] args) {
         
         /*also might change to CREATE TABLE IF NOT EXISTS tableName just in
         case??? not sure though comeback to this later
