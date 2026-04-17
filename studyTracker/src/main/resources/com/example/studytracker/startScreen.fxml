@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studytracker.startScreenController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #121640;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studytracker.startScreenController">
    <children>
       <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <columnConstraints>
@@ -15,7 +21,7 @@
             <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;">
                <children>
                   <Button alignment="CENTER" layoutX="144.0" layoutY="431.0" mnemonicParsing="false" onAction="#loginPressed" prefHeight="49.0" prefWidth="163.0" style="-fx-background-color: #121640;" text="LOG IN " textFill="WHITE">
                      <font>
@@ -51,9 +57,12 @@
                   <Label layoutX="28.0" layoutY="182.0" text="Sign in to continue your study journey" textFill="#121640" />
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #121640;" GridPane.columnIndex="1">
+            <AnchorPane prefHeight="600.0" prefWidth="473.0" style="-fx-background-color: #121640;" GridPane.columnIndex="1">
                <children>
-                  <Button layoutX="176.0" layoutY="447.0" mnemonicParsing="false" text="Create Account" />
+                  <Button layoutX="144.0" layoutY="431.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="163.0" style="-fx-background-color: #FFFFFF;" text="CREATE ACCOUNT" textFill="#121640">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
                </children>
             </AnchorPane>
          </children>

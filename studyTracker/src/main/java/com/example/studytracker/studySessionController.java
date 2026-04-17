@@ -31,6 +31,8 @@ public class studySessionController {
     private TextField locationBox;
     @FXML
     private TextField moduleBox;
+    @FXML
+    private TextField expectedTime;
 
 
     //user wants to return to the menu from the study session page
@@ -53,9 +55,10 @@ public class studySessionController {
     //User has either started or finished study session - different function depending on which
     private void sessionButtonPressed(ActionEvent event) throws IOException{
 
-        //getting location and module data
+        //getting location, module and expected time data
         String location = locationBox.getText();
         String module = moduleBox.getText();
+        //int expectedTimeValue = Integer.valueOf(expectedTime.getText());
 
 
         //if true then user is starting study session - if not they are ending one
@@ -93,7 +96,7 @@ public class studySessionController {
             studySessionReviewController controller = fxmlLoader.getController();
             controller.setLabel(location + " . " + module );
 
-            //TODO pass through all needed info about the study session needed to end it
+            //TODO pass through all needed info about the study session needed to end it to the review controller
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
