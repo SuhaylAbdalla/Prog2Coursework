@@ -3,26 +3,29 @@ import java.sql.*;
  *
  * @author oluwabukunmi
  * @author lulo166
+ * 
  */
 
-// HAS NOT BEEN TESTED STILL A WORK IN PROGRESS :P
+// Tested, but driver problem
 public class DatabaseConnection {
     
-    private static final String DB_URL = "jdbc:sqlite:studytracker.db";
+    private static final String DB_URL = "jdbc:sqlite:database.db";
+    private static String user = "user";
+    private static String password = "password";
     private static Connection conn = null;
     
     public static Connection getConnection() throws SQLException{
         
         //check if the database doesn't exist yet
         if(conn == null || conn.isClosed()){
-            conn = DriverManager.getConnection(DB_URL);
+            conn = DriverManager.getConnection(DB_URL, user, password);
             System.out.println("Database connection established");  
         }
         return conn;
     }
     
     public static void closeDatabaseConnection(){
-        if(conn !=null){
+        if(conn != null){
             try{
                 conn.close();
                 System.out.println("Database connection closed");
@@ -39,7 +42,6 @@ public class DatabaseConnection {
         
         /*also might change to CREATE TABLE IF NOT EXISTS tableName just in
         case??? not sure though comeback to this later
-        
         */
         
         //potential user table??? also are we doing email? double check here as well
