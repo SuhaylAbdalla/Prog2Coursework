@@ -24,7 +24,7 @@ public class studySessionReviewController {
         sessionInfoLabel.setText(info);
     }
 
-    //save pressed and user moves back to main menu
+    //save pressed and user moves to review trends
     @FXML
     private void savePressed(ActionEvent event) throws IOException {
 
@@ -34,7 +34,7 @@ public class studySessionReviewController {
 
         //TODO submit all data to sessionEnd
 
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("mainMenu.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("trendsWindow.fxml"));
         Parent root = fxmlLoader.load();
 
         //getting current stage
