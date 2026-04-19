@@ -4,13 +4,11 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 public class database_get {
 
+    private static final String DB_URL = "jdbc:sqlite:database.db"; // to be edited when correct driver found
+
     public String getAllLocations() { // gets all locations that have been studied at
         try {
-            Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/", // find the driver
-                "username",
-                "password"
-            );
+            Connection conn = DriverManager.getConnection(DB_URL);
             Statement statement = conn.createStatement();
             ResultSet result = statement.executeQuery("SELECT location FROM study_sessions;");
             return result.getString(1);
@@ -22,11 +20,7 @@ public class database_get {
     
     public String getTopLocations() { // gets the locations most frequently studied at
         try {
-            Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/", // find the driver
-                "username",
-                "password"
-            );
+            Connection conn = DriverManager.getConnection(DB_URL);
             Statement statement = conn.createStatement();
             ResultSet result = statement.executeQuery("SELECT location, COUNT(id_session) AS [TimesStudiedAt] FROM study_sessions GROUP BY location;");
             return result.getString(1); // temporary; currently only returns the locations
@@ -38,11 +32,7 @@ public class database_get {
 
     public String getProductiveTimes() { // gets the times most frequently studied at - needs date attribute in the study_sessions table to work effectively
          try {
-            Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/", // find the driver
-                "username",
-                "password"
-            );
+            Connection conn = DriverManager.getConnection(DB_URL);
             Statement statement = conn.createStatement();
             ResultSet result = statement.executeQuery("SELECT start, COUNT(id_session) AS [TimesStudiedAt] FROM study_sessions GROUP BY start;");
             return result.getString(1); // temporary; currently only returns the start times
