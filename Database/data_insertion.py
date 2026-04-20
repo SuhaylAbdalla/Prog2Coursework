@@ -6,9 +6,8 @@ import sqlite3
 conn = sqlite3.connect('database.db')
 cursor = conn.cursor()
 
-# Commands to add values to the db, use as a template
+# Commands to add values to the db, use as a template/test
 
-# need system for automated id numbering
 cursor.execute('''
 INSERT INTO courses VALUES (1, "Computer Science", "bla");
 ''')
