@@ -1,4 +1,5 @@
 import sqlite3
+import pandas as pd
 
 # @author lulo166
 
@@ -74,9 +75,9 @@ cursor.execute('''
 INSERT INTO study_sessions VALUES (4, '2026-04-13 12:35:00.000', NULL, NULL, "My room", 8, 2);
 ''')
 
-print (cursor.execute('''
-SELECT id_session FROM study_sessions;
-'''))
+query = ("SELECT id_session FROM study_sessions;")
+results = pd.read_sql_query(query,conn)
+print(results)
 
 # Saves the changes and closes the connection
 conn.commit()
