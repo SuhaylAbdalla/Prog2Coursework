@@ -1,36 +1,36 @@
 import sqlite3
 
-def addCourse(courseID, courseName, courseCode):
+def addCourse(courseName, courseCode):
     conn = sqlite3.connect('database.db')
     cursor = conn.cursor()
-    query = ("INSERT INTO courses VALUES(" + courseID + ", " + courseName + ", " + courseCode + ");")
+    query = "INSERT INTO courses(course_name, course_code) VALUES('" + courseName + "', '" + courseCode + "');"
     cursor.execute(query)
     # Saves the changes and closes the connection
     conn.commit()
     conn.close()
     
-def addModule(moduleID, moduleName, moduleCode, moduleCourseID):
+def addModule(moduleName, moduleCode, moduleCourseID):
     conn = sqlite3.connect('database.db')
     cursor = conn.cursor()
-    query = ("INSERT INTO modules VALUES(" + moduleID + ", " + moduleName + ", " + moduleCode + ", " + moduleCourseID + ");")
+    query = ("INSERT INTO modules(module_name, module_code, module_course_id) VALUES(" + moduleName + ", " + moduleCode + ", " + moduleCourseID + ");")
     cursor.execute(query)
     # Saves the changes and closes the connection
     conn.commit()
     conn.close()
     
-def addAssignment(assignmentID, assignmentName, assignmentDeadline, assignmentWeight, gradeReceived, assignmentModuleID):
+def addAssignment(assignmentName, assignmentDeadline, assignmentWeight, gradeReceived, assignmentModuleID):
     conn = sqlite3.connect('database.db')
     cursor = conn.cursor()
-    query = ("INSERT INTO assignments VALUES(" + assignmentID + ", " + assignmentName + ", " + assignmentDeadline + ", " + assignmentWeight + ", " + gradeReceived + ", " + assignmentModuleID + ");")
+    query = ("INSERT INTO assignments(assignment_name, assignment_deadline, assignment_weight, grade_received, assignment_module_id) VALUES(" + assignmentName + ", " + assignmentDeadline + ", " + assignmentWeight + ", " + gradeReceived + ", " + assignmentModuleID + ");")
     cursor.execute(query)
     # Saves the changes and closes the connection
     conn.commit()
     conn.close()
 
-def addStudySession(sessionID, startTime, endTime, duration, location, productivity, sessionAssignmentID):
+def addStudySession(startTime, endTime, duration, location, productivity, sessionAssignmentID):
     conn = sqlite3.connect('database.db')
     cursor = conn.cursor()
-    query = ("INSERT INTO study_sessions VALUES(" + sessionID + ", " + startTime + ", " + endTime + ", " + duration + ", " + location + ", " + productivity + ", " + sessionAssignmentID + ");")
+    query = ("INSERT INTO study_sessions(start, end, duration, location, productivity, session_assignment_id) VALUES(" + startTime + ", " + endTime + ", " + duration + ", " + location + ", " + productivity + ", " + sessionAssignmentID + ");")
     cursor.execute(query)
     # Saves the changes and closes the connection
     conn.commit()
