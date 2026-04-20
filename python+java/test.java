@@ -7,14 +7,14 @@ public class test {
         try {
             ProcessBuilder pb = new ProcessBuilder("python", "script.py");
             Process process = pb.start();
-
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
             String line;
             while ((line = reader.readLine()) != null) {
                 System.out.println(line);
             }
-       
-        } catch (IOException) {
+            int exitCode = process.waitFor();
+            System.out.println("Python script executed with exit code: " + exitCode);
+        } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
     }
