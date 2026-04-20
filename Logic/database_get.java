@@ -40,11 +40,19 @@ public class database_get {
         catch (Exception e) {
             return e.toString();
         }
-    } // SELECT start, end, duration FROM study_sessions; use aggregations
+    }
 
-    public double getAverageFocusTime(String timeframe) { // gets the average focus time of study sessions in a given timeframe
-        return 0.0;
-    } // talk to requirements
+    public String getAverageProductivityByLocation() { // gets the average productivity at each location
+        try {
+            Connection conn = DriverManager.getConnection(DB_URL);
+            Statement statement = conn.createStatement();
+            ResultSet result = statement.executeQuery("SELECT location, AVG(productivity) AS [averageProductivity] FROM study_sessions GROUP BY location;");
+            return result.getString(1);
+        }
+        catch (Exception e) {
+            return e.toString();
+        }
+    }
 
     public double getStudyHours(String timeframe) { // gets the number of hours studied in a given timeframe
         return 0.0;
