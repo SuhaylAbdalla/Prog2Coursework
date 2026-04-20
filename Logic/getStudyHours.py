@@ -2,7 +2,7 @@ import sqlite3
 import pandas as pd
 
 # @author lulo166
-#not finished yet
+#not finished yet, need to find a way to integrate the timeframe variable. 
 
 conn = sqlite3.connect('database.db')
 cursor = conn.cursor()
