@@ -13,7 +13,7 @@ public class database_get {
             Connection conn = DriverManager.getConnection(DB_URL);
             Statement statement = conn.createStatement();
             ResultSet result = statement.executeQuery("SELECT location FROM study_sessions;");
-            closeDatabaseConnection() // added the code to close the connection to the db
+            conn.close();
             return result.getString(1);
         }
         catch (Exception e) {
@@ -26,7 +26,7 @@ public class database_get {
             Connection conn = DriverManager.getConnection(DB_URL);
             Statement statement = conn.createStatement();
             ResultSet result = statement.executeQuery("SELECT location, COUNT(id_session) AS [TimesStudiedAt] FROM study_sessions GROUP BY location;");
-            closeDatabaseConnection() // added the code to close the connection to the db
+            conn.close();
             return result.getString(1); // temporary; currently only returns the locations
         }
         catch (Exception e) {
@@ -39,7 +39,7 @@ public class database_get {
             Connection conn = DriverManager.getConnection(DB_URL);
             Statement statement = conn.createStatement();
             ResultSet result = statement.executeQuery("SELECT start, COUNT(id_session) AS [TimesStudiedAt] FROM study_sessions GROUP BY start;");
-            closeDatabaseConnection() // added the code to close the connection to the db
+            conn.close();
             return result.getString(1); // temporary; currently only returns the start times
         }
         catch (Exception e) {
@@ -52,7 +52,7 @@ public class database_get {
             Connection conn = DriverManager.getConnection(DB_URL);
             Statement statement = conn.createStatement();
             ResultSet result = statement.executeQuery("SELECT location, AVG(productivity) AS [averageProductivity] FROM study_sessions GROUP BY location;");
-            closeDatabaseConnection() // added the code to close the connection to the db
+            conn.close();
             return result.getString(1);
         }
         catch (Exception e) {
