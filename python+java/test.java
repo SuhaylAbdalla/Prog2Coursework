@@ -13,8 +13,6 @@ public class test {
             while ((line = reader.readLine()) != null) {
                 System.out.println(line);
             }
-
-            int exitCode = process.waitFor();
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }

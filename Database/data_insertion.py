@@ -15,7 +15,6 @@ INSERT INTO courses VALUES (1, "Computer Science", "bla");
 
 cursor.execute('''
 INSERT INTO modules VALUES (5, "Programming 2", "CM12005", 1);
-);
 ''')
 
 cursor.execute('''
