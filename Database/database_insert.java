@@ -14,7 +14,7 @@ class database_insert {
             ResultSet result = statement.executeQuery("INSERT INTO courses VALUES(" + courseID + ", " + courseName + ", " + courseCode + ");");
         }
         catch (Exception e) {
-            return;
+            System.err.println(e);
         }
     }
 
@@ -25,7 +25,7 @@ class database_insert {
             ResultSet result = statement.executeQuery("INSERT INTO modules VALUES(" + moduleID + ", " + moduleName + ", " + moduleCode + ", " + moduleCourseID + ");");
         }
         catch (Exception e) {
-            return;
+            System.err.println(e);
         }
     }
 
@@ -36,7 +36,7 @@ class database_insert {
             ResultSet result = statement.executeQuery("INSERT INTO assignments VALUES(" + assignmentID + ", " + assignmentName + ", " + assignmentDeadline + ", " + assignmentWeight + ", " + gradeReceived + ", " + assignmentModuleID +");");
         }
         catch (Exception e) {
-            return;
+            System.err.println(e);
         }
     }
 
@@ -47,7 +47,7 @@ class database_insert {
             ResultSet result = statement.executeQuery("INSERT INTO study_sessions VALUES(" + sessionID + ", " + startTime + ", " + endTime + ", " + duration + ", " + location + ", " + productivity + ", " + sessionAssignmentID +");");
         }
         catch (Exception e) {
-            return;
+            System.err.println(e);
         }
     }
 }
