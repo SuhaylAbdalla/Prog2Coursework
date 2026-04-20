@@ -4,7 +4,7 @@ import pandas as pd
 # @author lulo166
 
 # Connexion to the DB (or creation if it doesn't exist)
-conn = sqlite3.connect('databaseTest.db')
+conn = sqlite3.connect('database.db')
 cursor = conn.cursor()
 
 query = ("SELECT id_session FROM study_sessions;")

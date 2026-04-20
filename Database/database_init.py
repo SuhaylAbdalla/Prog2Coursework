@@ -20,7 +20,7 @@ cursor = conn.cursor()
                
 # Is there a course code for computer science, I can't find one ?
 cursor.execute('''
-CREATE TABLE courses (
+CREATE TABLE courses(
     id_course INTEGER PRIMARY KEY AUTOINCREMENT,
     course_name TEXT NOT NULL,
     course_code TEXT NOT NULL
@@ -28,7 +28,7 @@ CREATE TABLE courses (
 ''')
 
 cursor.execute('''
-CREATE TABLE modules (
+CREATE TABLE modules(
     id_module INTEGER PRIMARY KEY AUTOINCREMENT,
     module_name TEXT NOT NULL,
     module_code TEXT NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE modules (
 
 # exams count as assignment, at least in the back end
 cursor.execute('''
-CREATE TABLE assignments (
+CREATE TABLE assignments(
     id_assignment INTEGER PRIMARY KEY AUTOINCREMENT, 
     assignment_title TEXT NOT NULL, 
     assignment_deadline DATETIME, 
@@ -52,7 +52,7 @@ CREATE TABLE assignments (
 
 # For now, you cannot have multiple assignment per study session
 cursor.execute('''
-CREATE TABLE study_sessions (
+CREATE TABLE study_sessions(
     id_session INTEGER PRIMARY KEY AUTOINCREMENT, 
     start DATETIME NOT NULL, 
     end DATETIME, 
