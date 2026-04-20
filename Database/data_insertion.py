@@ -25,7 +25,9 @@ INSERT INTO assignments VALUES (2, "Prog 2 CW 2", '2026-05-01 20:00:00.000', 50.
 cursor.execute('''
 INSERT INTO study_sessions VALUES (4, '2026-04-13 12:35:00.000', NULL, NULL, "My room", 8, 2);
 ''')
-
+cursor.execute('''
+INSERT INTO study_sessions VALUES (5, '2026-04-14 12:35:00.000', NULL, NULL, "The library", 5, 2);
+''')
 
 # Saves the changes and closes the connection
 conn.commit()

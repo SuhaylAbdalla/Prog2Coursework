@@ -4,33 +4,18 @@ import java.io.InputStreamReader;
 
 public class LogicJava {
 
-    public static void main(String[] args) {
+    public String getAllLocations() { // gets all locations that have been studied at
         try {
-            ProcessBuilder pb = new ProcessBuilder("python", "LogicPython+Java.py");
+            ProcessBuilder pb = new ProcessBuilder("python", "getAllLocations.py");
             Process process = pb.start();
-
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
             String line;
             while ((line = reader.readLine()) != null) {
                 System.out.println(line);
             }
-
             int exitCode = process.waitFor();
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
-        }
-    }
-
-    public String getAllLocations() { // gets all locations that have been studied at
-        try {
-            Connection conn = DriverManager.getConnection(DB_URL);
-            Statement statement = conn.createStatement();
-            ResultSet result = statement.executeQuery("SELECT location FROM study_sessions;");
-            conn.close();
-            return result.getString(1);
-        }
-        catch (Exception e) {
-            return e.toString();
         }
     }
     
