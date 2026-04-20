@@ -36,7 +36,8 @@ CREATE TABLE assignments (
 CREATE TABLE study_sessions (
     id_session INTEGER PRIMARY KEY AUTOINCREMENT, 
     start DATETIME NOT NULL, 
-    end DATETIME, duration TIME, 
+    end DATETIME, 
+    duration TIME, 
     location TEXT, 
     productivity INTEGER NOT NULL CHECK(productivity >= 0 AND productivity <11), 
     session_assignment_id INTEGER NOT NULL,
