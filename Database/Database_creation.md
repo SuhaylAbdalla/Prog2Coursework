@@ -1,3 +1,5 @@
+@author lulo166
+
 CREATE TABLE courses (
     id_course INTEGER NOT NULL PRIMARY KEY,
     course_name TEXT NOT NULL,

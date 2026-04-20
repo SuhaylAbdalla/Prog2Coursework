@@ -2,17 +2,18 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+
+
 public class database_get {
+
+    private static final String DB_URL = "jdbc:sqlite:database.db"; // to be edited when correct driver found
 
     public String getAllLocations() { // gets all locations that have been studied at
         try {
-            Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/", // find the driver
-                "username",
-                "password"
-            );
+            Connection conn = DriverManager.getConnection(DB_URL);
             Statement statement = conn.createStatement();
             ResultSet result = statement.executeQuery("SELECT location FROM study_sessions;");
+            conn.close();
             return result.getString(1);
         }
         catch (Exception e) {
@@ -22,13 +23,10 @@ public class database_get {
     
     public String getTopLocations() { // gets the locations most frequently studied at
         try {
-            Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/", // find the driver
-                "username",
-                "password"
-            );
+            Connection conn = DriverManager.getConnection(DB_URL);
             Statement statement = conn.createStatement();
             ResultSet result = statement.executeQuery("SELECT location, COUNT(id_session) AS [TimesStudiedAt] FROM study_sessions GROUP BY location;");
+            conn.close();
             return result.getString(1); // temporary; currently only returns the locations
         }
         catch (Exception e) {
@@ -38,23 +36,29 @@ public class database_get {
 
     public String getProductiveTimes() { // gets the times most frequently studied at - needs date attribute in the study_sessions table to work effectively
          try {
-            Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/", // find the driver
-                "username",
-                "password"
-            );
+            Connection conn = DriverManager.getConnection(DB_URL);
             Statement statement = conn.createStatement();
             ResultSet result = statement.executeQuery("SELECT start, COUNT(id_session) AS [TimesStudiedAt] FROM study_sessions GROUP BY start;");
+            conn.close();
             return result.getString(1); // temporary; currently only returns the start times
         }
         catch (Exception e) {
             return e.toString();
         }
-    } // SELECT start, end, duration FROM study_sessions; use aggregations
+    }
 
-    public double getAverageFocusTime(String timeframe) { // gets the average focus time of study sessions in a given timeframe
-        return 0.0;
-    } // talk to requirements
+    public String getAverageProductivityByLocation() { // gets the average productivity at each location
+        try {
+            Connection conn = DriverManager.getConnection(DB_URL);
+            Statement statement = conn.createStatement();
+            ResultSet result = statement.executeQuery("SELECT location, AVG(productivity) AS [averageProductivity] FROM study_sessions GROUP BY location;");
+            conn.close();
+            return result.getString(1);
+        }
+        catch (Exception e) {
+            return e.toString();
+        }
+    }
 
     public double getStudyHours(String timeframe) { // gets the number of hours studied in a given timeframe
         return 0.0;
