@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class PythonCaller {
+public class test {
     public static void main(String[] args) {
         try {
             ProcessBuilder pb = new ProcessBuilder("python", "script.py");
