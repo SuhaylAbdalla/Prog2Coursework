@@ -13,7 +13,6 @@ public class test {
                 System.out.println(line);
             }
             int exitCode = process.waitFor();
-            System.out.println("Python script executed with exit code: " + exitCode);
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
