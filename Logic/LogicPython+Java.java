@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 public class test {
     public static void main(String[] args) {
         try {
-            ProcessBuilder pb = new ProcessBuilder("python", "script.py");
+            ProcessBuilder pb = new ProcessBuilder("python", "LogicPython+Java.py");
             Process process = pb.start();
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
