@@ -46,7 +46,7 @@
             <!-- Driver Dependency for the db (still doesn't work ) -->
             <groupId>org.xerial</groupId>
             <artifactId>sqlite-jdbc</artifactId>
-            <version>3.45.3.0</version>
+            <version>3.47.2.0</version>
         </dependency>
     </dependencies>
 
