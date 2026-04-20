@@ -2,8 +2,8 @@ import sqlite3
 import pandas as pd
 
 # @author lulo166
+#not finished yet
 
-# Connexion to the DB (or creation if it doesn't exist)
 conn = sqlite3.connect('database.db')
 cursor = conn.cursor()
 
