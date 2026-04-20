@@ -8,14 +8,15 @@ cursor = conn.cursor()
 
 # Create the different tables of the database
 
-cursor.execute('''
-CREATE TABLE users (
-    id_user INTEGER PRIMARY KEY AUTOINCREMENT, 
-    email TEXT NOT NULL UNIQUE, 
-    username TEXT NOT NULL UNIQUE, 
-    password TEXT NOT NULL
-);
-''')
+#need to discuss for the user/login
+#cursor.execute('''
+#CREATE TABLE users (
+#    id_user INTEGER PRIMARY KEY AUTOINCREMENT, 
+#    email TEXT NOT NULL UNIQUE, 
+#    username TEXT NOT NULL UNIQUE, 
+#    password TEXT NOT NULL
+#);
+#''')
                
 # Is there a course code for computer science, I can't find one ?
 cursor.execute('''
