@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 //launches program
-public class Launcher {
+public class NewLauncher {
     public static void main(String[] args) {
         Application.launch(HelloApplication.class, args);
         try {
