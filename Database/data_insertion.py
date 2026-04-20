@@ -24,7 +24,7 @@ INSERT INTO assignments VALUES (2, "Prog 2 CW 2", '2026-05-01 20:00:00.000', 50.
 
 # need to code the duration to autocomplete
 cursor.execute('''
-INSERT INTO assignments VALUES (4, '2026-04-13 12:35:00.000', NULL, NULL, "My room", 8, 2);
+INSERT INTO study_sessions VALUES (4, '2026-04-13 12:35:00.000', NULL, NULL, "My room", 8, 2);
 ''')
 
 
