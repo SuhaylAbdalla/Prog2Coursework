@@ -148,7 +148,7 @@ public class trendsWindowController {
         productivityChart.setData(FXCollections.observableArrayList(dailyProdChartSeries));
 
         //updating insight label
-        insightsLabel.setText("You study best on X, you should try to avoid studying on Y ....");
+        insightsLabel.setText("You study best on Saturday, you should try to avoid studying on Wednesday");
 
     }
 

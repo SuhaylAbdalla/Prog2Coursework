@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studytracker.healthQuizController">
+   <children>
+       <Label layoutX="28.0" layoutY="43.0" text="study tracker" textFill="#121640">
+           <font>
+               <Font name="Cooper Black" size="38.0" />
+           </font>
+       </Label>
+       <Label layoutX="28.0" layoutY="87.0" text="UNIVERSITY OF BATH" textFill="#a6a6ab">
+           <font>
+               <Font size="24.0" />
+           </font>
+       </Label>
+      <Label alignment="CENTER" layoutX="1.0" layoutY="135.0" prefHeight="45.0" prefWidth="900.0" text="How did you sleep?" textFill="#121640">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font></Label>
+       <HBox alignment="CENTER" layoutY="400.0" prefHeight="35.0" prefWidth="900.0" spacing="50.0">
+           <children>
+               <CheckBox fx:id="poorBox" mnemonicParsing="false" text="Poor" textFill="#121640">
+                   <font>
+                       <Font name="System Bold" size="12.0" />
+                   </font>
+               </CheckBox>
+               <CheckBox fx:id="fairBox" mnemonicParsing="false" text="Fair" textFill="#121640">
+                   <font>
+                       <Font name="System Bold" size="12.0" />
+                   </font>
+               </CheckBox>
+               <CheckBox fx:id="goodBox" mnemonicParsing="false" text="Good" textFill="#121640">
+                   <font>
+                       <Font name="System Bold" size="12.0" />
+                   </font>
+               </CheckBox>
+               <CheckBox fx:id="greatBox" mnemonicParsing="false" text="Great" textFill="#121640">
+                   <font>
+                       <Font name="System Bold" size="12.0" />
+                   </font>
+               </CheckBox>
+           </children>
+       </HBox>
+       <Button layoutX="700.0" layoutY="488.0" mnemonicParsing="false" onAction="#savePressed" prefHeight="45.0" prefWidth="148.0" style="-fx-background-color: #121640;" text="Save &amp; Start Day" textFill="WHITE">
+           <font>
+               <Font name="System Bold" size="14.0" />
+           </font>
+       </Button>
+      <Label alignment="CENTER" layoutY="195.0" prefHeight="17.0" prefWidth="900.0" text="Loged once per morning. This is the only health data we ask for - everything" textFill="#121640" />
+      <Label layoutX="300.0" layoutY="214.0" text="else is captured automatically when you end a study session." textFill="#121640" />
+      <Label layoutX="321.0" layoutY="248.0" text="SLEEP HOURS LAST NIGHT" textFill="#121640">
+         <font>
+            <Font name="Cooper Black" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutY="345.0" prefWidth="900.0" text="SLEEP QUALITY " textFill="#121640">
+         <font>
+            <Font name="Cooper Black" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="sleepHours" layoutX="375.0" layoutY="274.0" />
+   </children>
+</AnchorPane>
