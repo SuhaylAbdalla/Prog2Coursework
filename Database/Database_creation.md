@@ -10,7 +10,9 @@ CREATE TABLE users (
 CREATE TABLE courses (
     id_course INTEGER PRIMARY KEY AUTOINCREMENT,
     course_name TEXT NOT NULL,
-    course_code TEXT NOT NULL
+    course_code TEXT NOT NULL,
+    course_user_id INTEGER NOT NULL,
+    FOREIGN KEY (course_user_id) REFERENCES users (id_user)
 );
 
 CREATE TABLE modules (
